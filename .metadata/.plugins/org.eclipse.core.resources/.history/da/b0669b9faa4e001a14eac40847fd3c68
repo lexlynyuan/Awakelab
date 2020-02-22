@@ -1,0 +1,16 @@
+package clases;
+
+public class Mainnnn {
+	public static void main(String arg[]){
+		  /**Objeto miGuitarra de tipo Instrumento */
+		  
+		  Guitarra miGuitarra= new Guitarra("Diez");
+		  System.out.println("Instrumento : "+miGuitarra.tipo);
+		  miGuitarra.tocar();
+		  miGuitarra.Cuerda();
+		  System.out.println();
+		 
+		  
+		 }
+		 
+		}

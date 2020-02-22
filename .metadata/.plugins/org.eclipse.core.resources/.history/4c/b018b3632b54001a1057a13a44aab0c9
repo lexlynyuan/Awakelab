@@ -1,0 +1,13 @@
+package clases20.feb;
+
+public class clientes {
+
+	private int adultos;
+	private int ninos;
+	
+	Scanner scanner = new Scanner(System.in);
+	
+	System.out.println("Ingrese cantidad de adultos");
+	adulto = scanner.nextline();
+	
+}

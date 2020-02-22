@@ -1,0 +1,8 @@
+package clases13.feb;
+
+public class Triatleta {
+	public class TriAtleta implements Ciclista,Corredor,Nadador{
+
+	}
+
+}

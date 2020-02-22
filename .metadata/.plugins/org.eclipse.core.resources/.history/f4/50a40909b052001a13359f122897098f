@@ -1,0 +1,16 @@
+package clases17.feb;
+import java.util.Scanner;
+public class Ejecutable extends Producto{
+
+	public static void main(String[] args) {
+
+		Producto Objeto[] = new Producto[10];
+		
+
+		Scanner teclado = new Scanner(System.in);
+        System.out.print("Introduzca nombre del producto: ");
+        setNombre = teclado.nextLine();
+		
+	}
+
+}

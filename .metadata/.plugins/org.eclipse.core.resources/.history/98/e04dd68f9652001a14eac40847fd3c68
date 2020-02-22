@@ -1,0 +1,10 @@
+package clases17.feb;
+
+public class Ejecutable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

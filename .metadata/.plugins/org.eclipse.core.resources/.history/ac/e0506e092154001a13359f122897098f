@@ -1,0 +1,45 @@
+package clases17.feb;
+import java.util.Scanner;
+public class Ejecutable {
+
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		Producto Objeto [] = new Producto[10];
+	
+		for (int i=0; i<5; i++) {
+			
+			System.out.println("Introduzca nombre del producto perecedero: ");
+			String nom = teclado.next();
+			Objeto[i].setNombre(nom);
+        
+			System.out.print("Introduzca precio del producto perecedero: ");
+			double valor = teclado.nextDouble();
+			Objeto[i].setPrecio(valor);
+        
+			System.out.print("Introduzca cantidad del producto perecedero: ");
+			int cant = teclado.nextInt();
+			Objeto[i].setCantidad(cant);
+		}
+		
+		for (int i=5; i<10 ; i++) {
+		
+			System.out.println("Introduzca nombre del producto No perecedero: ");
+			String nom = teclado.next();
+			Objeto[i].setNombre(nom);	
+		
+			System.out.print("Introduzca precio del producto No perecedero: ");
+			double valor = teclado.nextDouble();
+			Objeto[i].setPrecio(valor);
+	        
+			System.out.print("Introduzca cantidad del producto No perecedero: ");
+			int cant = teclado.nextInt();
+			Objeto[i].setCantidad(cant);
+		}
+		
+		
+	}
+}
+
+

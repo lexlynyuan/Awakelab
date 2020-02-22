@@ -1,0 +1,9 @@
+package clases17.feb;
+
+public class NoPerecedero {
+
+	public NoPerecedero() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

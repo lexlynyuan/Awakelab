@@ -1,0 +1,21 @@
+package clases13.feb;
+
+public class Publicaciones {
+
+	private String tipo;
+	private int ano;
+	private boolean estado;
+	public Publicaciones(String tipo, int ano, boolean estado) {
+		
+		this.tipo = tipo;
+		this.ano = ano;
+		this.estado = estado;
+		
+	}
+	
+	
+	
+	
+	
+
+}

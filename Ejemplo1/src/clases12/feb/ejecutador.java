@@ -1,0 +1,22 @@
+package clases12.feb;
+
+import cl.awakelab.ejercicio.Acumulador;
+
+public class ejecutador {
+public static void main(String[] args) {
+	//Constantess const = new Constantess();
+	System.out.println(Constantess.VALOR_MIN);
+	
+	
+	Acumulador acum = new Acumulador(23);
+	acum.incremento(11);
+
+	System.out.println(acum.daValor());
+	
+
+	
+			
+}
+	
+
+}

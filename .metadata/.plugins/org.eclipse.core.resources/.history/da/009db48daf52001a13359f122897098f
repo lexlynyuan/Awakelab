@@ -1,0 +1,16 @@
+package clases17.feb;
+
+public class Perecedero extends Producto {
+	private int DiasCaduca;
+
+	/**
+	 * 
+	 */
+	public Perecedero() {
+		super(nombre, precio, cantidad);
+
+	
+	}
+	
+	
+}

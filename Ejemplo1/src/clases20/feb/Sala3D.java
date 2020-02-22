@@ -1,0 +1,5 @@
+package clases20.feb;
+
+public class Sala3D implements Sala {
+
+}

@@ -1,0 +1,18 @@
+package clases;
+
+public class Guitarra extends Instrumento {
+	public String Cuerda;
+	
+	public Guitarra(){
+		tipo="Guitarra"; 
+		Cuerda="diez cuerdas";
+	}
+
+	public void tocar() {
+	  System.out.println("Tocar La Guitarra");
+	
+	 }
+	public void cuerda() {
+		System.out.println(Cuerda);
+	}
+}

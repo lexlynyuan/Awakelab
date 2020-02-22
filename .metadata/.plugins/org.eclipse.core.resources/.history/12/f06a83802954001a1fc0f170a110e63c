@@ -1,0 +1,31 @@
+package clases20.feb;
+
+import java.util.Scanner;
+
+public class cliente {
+	private int adulto;
+	private int nino;
+	
+	Scanner entrada = new Scanner(System.in);
+	
+    System.out.println("Ingrese cantidad de adultos: ");
+	adulto = entrada.nextLine();
+
+	
+	switch (SalaAM){
+    
+    case 2D:
+        2000;
+        break;
+    case 3D:
+        3000;
+        break;
+    case 4Dx:
+        7000;
+    case Imax:
+    	5000;
+        break;
+    }
+    
+
+}

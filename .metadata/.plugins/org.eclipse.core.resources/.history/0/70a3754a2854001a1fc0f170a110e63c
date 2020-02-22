@@ -1,0 +1,16 @@
+package clases20.feb;
+
+import java.util.Scanner;
+
+public class cliente {
+	private int adulto;
+	private int nino;
+	
+	Scanner entrada = new Scanner(System.in);
+	
+	System.out.print("Ingrese cantidad de adultos ")
+	//entrada = new Scanner(System.in);
+	adultos = entrada.nextLine();
+
+}
+}

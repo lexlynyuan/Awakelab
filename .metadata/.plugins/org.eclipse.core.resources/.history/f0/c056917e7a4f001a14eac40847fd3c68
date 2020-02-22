@@ -1,0 +1,28 @@
+package clases13.feb;
+
+import java.util.ArrayList;
+
+public class Main {
+	private static ArrayList<Publicaciones> arreglo;
+public static void main(String[] args) {
+	
+	arreglo = new ArrayList<Publicaciones>();
+	
+	Publicaciones Libro1 = new Publicaciones("Libro 1", 1990, true);
+	Publicaciones Libro2 = new Publicaciones("Libro 2", 1989, false);
+	Publicaciones Revista1 = new Publicaciones("Revista 1", 1988, false);
+	Publicaciones Revista2 = new Publicaciones("Revista 2", 1991, false);
+
+	arreglo.add(Libro1);
+	arreglo.add(Libro2);
+	arreglo.add(Revista1);
+	arreglo.add(Revista2);
+	
+	
+	for (Publicaciones p:arreglo) {
+		System.out.println(p.getTipo(0));
+	}
+	
+}
+
+}
