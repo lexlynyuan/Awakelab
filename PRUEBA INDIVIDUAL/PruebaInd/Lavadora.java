@@ -1,32 +1,40 @@
 package PruebaInd;
 
 public class Lavadora extends Electrodomesticos {
+	//declaracion de la cte.
+	protected final static int CARGA = 5;
+	//declaracion del atributo
 	private int carga; 
-	static final int CARGA = 5;
+
+//constructores
 	
 	public Lavadora() {
+	//	this(PRECIOBASE, PESO, COLOR_DEF, CONS_ENERG_DEF);
+	}
 	
+	public Lavadora(double precioBase, int peso) {
+		super.getPrecioBase();
+		super.getPeso();
 	}
-	public Lavadora(int precioBase, int peso) {
-		super(precioBase, peso);
-	}
-	public Lavadora(int precioBase, String color, char consumoEnergetico, 
-					int peso, int carga) {
-		super(precioBase, color, consumoEnergetico, peso);
+	
+	public Lavadora(int precioBase, String color, char consumoEnergetico, int peso, int carga) {
+		super(color, consumoEnergetico, peso);
 		this.carga = carga;
 	}
 
-
+// get del atributo carga
+	
 	public int getCarga() {
 		return carga;
 	}
-
-public double precioFinal(){
-		double precio =super.precioFinal();
+// calculo del precio 
+	
+public void PrecioFinal(){
+		super.PrecioFinal();
 		if (carga>30){
-		precio+=50;		
+		consultaPrecio+=50;		
 		}
-return precio;
+ setPrecioBase(consultaPrecio);
 
 	}
 

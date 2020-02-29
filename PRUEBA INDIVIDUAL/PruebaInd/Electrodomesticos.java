@@ -1,37 +1,23 @@
 package PruebaInd;
 
 public class Electrodomesticos {
+//declaracion de las constantes 
+	
+	final static double PRECIOBASE = 100000;
+	final static double PESO = 5;
+	final static String COLOR_DEF="blanco";
+	final static char CONS_ENERG_DEF= 'F';
+	//PRECIOBASE, PESO, COLOR_DEF, CONS_ENERG_DEF
 
-	protected int precioBase;
+// declaracion de los atributos
+	private double precioBase;
 	private String color; 
 	private char consumoEnergetico;
 	private int peso;
-	static final int PRECIOBASE = 100000;
-	static final int PESO = 5;
-	protected final static String COLOR_DEF="blanco";
-	protected final static char CONS_ENERG_DEF= 'F';
-	protected final static double PBASE_DEF=100;
+	public double consultaPrecio; 
 	
-	public Electrodomesticos() {
-	}
+//getters de los atributos
 	
-	public Electrodomesticos(int precioBase, int peso) { 
-		this.precioBase = precioBase;
-		this.peso = peso;
-	}
-	
-	public Electrodomesticos(int precioBase, String color, char consumoEnergetico, int peso) {
-		super();
-		this.precioBase = precioBase;
-		this.color = color;
-		this.consumoEnergetico = consumoEnergetico;
-		this.peso = peso;
-	}
-
-	public int getPrecioBase() {
-		return precioBase;
-	}
-
 	public String getColor() {
 		return color;
 	}
@@ -43,7 +29,26 @@ public class Electrodomesticos {
 	public int getPeso() {
 		return peso;
 	}
-
+// constructores 
+	public Electrodomesticos(double precioBase, int peso) { 
+		this.peso = peso;
+		comprobarConsumoEnergetico(consumoEnergetico);
+		comprobarColor(color);
+		
+	}
+	
+	public Electrodomesticos(String color, char consumoEnergetico, int peso) {
+		super();
+		this.color = color;
+		this.consumoEnergetico = consumoEnergetico;
+		this.peso = peso;
+	}
+	public Electrodomesticos() {
+	}
+	
+//comprueba que la letra que ingresa esta dentro de los existentes,
+	// de lo contrario da la letra por defecto F
+	
 	private void comprobarConsumoEnergetico(char consumoEnergetico) {
 		char letrasConsumo[]={'A','B','C','D','E','F'};
 		boolean encontrado=false;
@@ -65,7 +70,8 @@ public class Electrodomesticos {
 
 	}	
 		
-
+//comprobar que el color esta dentro de los que hay disponibles, de caso contrario
+	//indica que no esta el color, y da por defecto el blanco.
 	private void comprobarColor(String color) {
 		
 		String colores[]={"blanco", "negro", "rojo", "azul", "gris",
@@ -89,40 +95,50 @@ public class Electrodomesticos {
           
     }	
 		
-	
-	public double precioFinal() {
-		double precio = 0;
-		switch (consumoEnergetico) {
-		case 'A':
-            precio+=100;
-            break;
-        case 'B':
-            precio+=80;
-            break;
-        case 'C':
-            precio+=60;
-            break;
-        case 'D':
-            precio+=50;
-            break;
-        case 'E':
-            precio+=30;
-            break;
-        case 'F':
-            precio+=10;
-            break;
-    }
+//calculo del preciofinal dependiendo del consumo energetico y peso que tenga 
 
-    if(peso>=0 && peso<19){
-        precio+=10;
-    }else if(peso>=20 && peso<49){
-        precio+=50;
-    }else if(peso>=50 && peso<=79){
-        precio+=80;
-    }else if(peso>=80){
-        precio+=100;
-    }	
-	return precioBase+precio;
+	public void PrecioFinal() {
+		double ValorLetra =0;
+		double ValorPeso =0;
+		if (getConsumoEnergetico() == 'A') {
+			ValorLetra = 100;
+		} else if (getConsumoEnergetico() == 'B') {
+			ValorLetra = 80;
+		  } else if (getConsumoEnergetico() == 'C') {
+			  ValorLetra = 60;
+		    } else if (getConsumoEnergetico() == 'D') {
+		    	ValorLetra = 50;
+		      } else if (getConsumoEnergetico() == 'E') {
+		    	 ValorLetra = 30;
+		        } else if (getConsumoEnergetico() == 'F') {
+		        	ValorLetra = 10;
+		        } else {
+		        	ValorLetra=10;
+		          }
+		  if (getPeso()>0 && getPeso()<20) {
+		        	ValorPeso = 10;
+		        } else if (getPeso()>=20 && getPeso()<50) {
+		        		ValorPeso = 50;	
+		        	} else if (getPeso()>=50 && getPeso()<80 ) {
+		        			ValorPeso = 80;
+		        		} else if (getPeso()>=80) {
+		        				ValorPeso= 100;
+		        		}else { 
+		        			ValorPeso=100;
+    }
+	   consultaPrecio = ValorPeso + ValorLetra;
+	   setPrecioBase(consultaPrecio);
+	  	}
+
+	public double getPrecioBase() {
+		return precioBase;
 	}
+
+	public void setPrecioBase(double precioBase) {
+		this.precioBase = precioBase;
+	}
+	
+	
 }
+
 	

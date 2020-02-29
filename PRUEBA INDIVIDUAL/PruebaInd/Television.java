@@ -1,22 +1,31 @@
 package PruebaInd;
 
 public class Television extends Electrodomesticos {
+	//declaracion de la cte.
+	final static int RES_DEF = 20;
+	//declaración de los atributos
 	private int resolucion;
 	private boolean sintonizadorTDT; 
-	private final static int RES_DEF = 20;
+
+	//constructores 
+	
 	public Television() {
 	}
-
-	public Television(int precioBase, int peso) {
-		super(precioBase, peso);
+	
+	public Television(double precioBase, int peso) {
+		super.getPrecioBase();
+		super.getPeso();
 	}
-	public Television(int precioBase, String color, char consumoEnergetico, 
+
+	public Television(String color, char consumoEnergetico, 
 					int peso, int resolucion, boolean sintonizadorTDT ) {
-		super(precioBase, color, consumoEnergetico, peso);
+		super( color, consumoEnergetico, peso);
 		this.resolucion = resolucion;
 		this.sintonizadorTDT = sintonizadorTDT;
 	}
 
+//Getters del atributo 
+	
 	public int getResolucion() {
 		return resolucion;
 	}
@@ -25,14 +34,17 @@ public class Television extends Electrodomesticos {
 		return sintonizadorTDT;
 	}
 
-	public double precioFinal() {
-		double precio =super.precioFinal();
+	
+	//calculo del precico con restriccion
+	
+	public void PrecioFinal() {
+		super.PrecioFinal();
 		if (resolucion > 40) {
-			precio+=precioBase*0.3;
+			consultaPrecio+=consultaPrecio*0.3;
 		}
 		if (sintonizadorTDT) {
-			precio+=50;
+			consultaPrecio+=50;
 		}
-		return precio;
+		setPrecioBase(consultaPrecio);
 	}
 }
